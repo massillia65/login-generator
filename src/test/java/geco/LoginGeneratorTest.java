@@ -41,4 +41,10 @@ public class LoginGeneratorTest {
         String login = loginGenerator.generateLoginForNomAndPrenom("Ralling","John");
         assertTrue("test generation incrément",login.equals("JRAL2"));
     }
+
+    @Test
+    public void testGenerateLoginAuMoins3Caracteres() throws Exception {
+        String login = loginGenerator.generateLoginForNomAndPrenom("Du","Paul");
+        assertTrue("test generation au moins 3 caractères",login.equals("PDU"));
+    }
 }
